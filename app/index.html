@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Interface</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.skypack.dev/@coral-xyz/anchor"></script>
+    <!-- Development (un-minified) -->
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-wallets@0.19.22/lib/cjs/index.js"></script>
+    <!-- Custom scripts at the end -->
+    <script type="module" src="./scripts/game.js"></script>
+    <script type="module" src="./scripts/wallet.js"></script>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <p>Current Position: (x: <span id="x-pos">0</span>, y: <span id="y-pos">0</span>)</p>
+
+    <!-- Wallet buttons -->
+    <div id="wallet-interface">
+        <button id="connectWallet">Connect Wallet</button>
+        <button id="disconnectWallet" hidden>Disconnect Wallet</button>
+    </div>
+
+    <!-- Send SOL button -->
+    <button id="sendSOL" disabled>Send SOL to a random address!</button>
+</body>
+
+</html>
